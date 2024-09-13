@@ -12,7 +12,7 @@ const BlogForm = () => {
         myInput.preventDefault()
 
         const blog = { title, author, content }
-        const response = await fetch('/api/blogs', {
+        const response = await fetch('https://urbantxt-api.onrender.com/api/blogs', {
             method: 'POST',
             body: JSON.stringify(blog),
             headers: {
