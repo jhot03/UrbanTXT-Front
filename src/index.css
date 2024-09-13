@@ -1,13 +1,199 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #f3f7f6;
+  --error: #fbfafa;
+}
 body {
+  background: #f1f1f1;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "robotica";
+}
+header {
+  background: #0a0a0a;
+}
+/* Flexbox layout for the header container */
+header .container {
+  font-family: "luminari";
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: space-evenly; /* Distribute space between items */
+  padding: 40px 20px; /* Padding around the container */
+  background: #070707; /* Background color for header */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styling for <h3> elements in the navbar */
+header .container h3 {
+  margin: 0; /* Remove default margin */
+  padding: 0 15px; /* Add padding for spacing */
+  font-weight: 500; /* Slightly bolder font for emphasis */
+  color: var(--primary); /* Primary color for text */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+header .container h4 {
+  margin: 0; /* Remove default margin */
+  padding: 5px 15px; /* Add padding for spacing */
+  border-radius: 2px;
+  background-color: green;
+  font-weight: 500; /* Slightly bolder font for emphasis */
+  color: var(--primary); /* Primary color for text */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+header .container h4:hover {
+  color: green; /* Change text color on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+  background: var(--primary); /* Background color on hover */
+  padding: 5px 15px; /* Add padding on hover */
+  border-radius: 4px; /* Rounded corners on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+header .container h1 {
+  margin: 0; /* Remove default margin */
+  color: var(--primary); /* Primary color for text */
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+header .container h1:hover {
+  margin: 0; /* Remove default margin */
+  transform: translateY(-5px); /* Lift effect on hover */
+  color: #66cd17; /* Primary color for text */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for <h3> elements */
+header .container h3:hover {
+  color: #66cd17; /* Change text color on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+  background: var(--primary); /* Background color on hover */
+  padding: 5px 15px; /* Add padding on hover */
+  border-radius: 4px; /* Rounded corners on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Style for header links */
+header a {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+/* Ensure spacing between links */
+header a:not(:last-child) {
+  margin-right: 20px; /* Space between links */
+}
+
+header a:hover {
+  background: var(--primary); /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  border-radius: 4px; /* Optional: Adds rounded corners */
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  gap: 20px; /* Space between grid items */
+  column-width: 3;
+  padding: 20px; /* Padding around the grid */
+  max-width: 1400px; /* Maximum width for the container */
+  margin: 0 auto; /* Center the container */
+}
+.blog-details {
+  background: #0c0c0c; 
+  border-radius: 8px; 
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  position: relative; 
+  margin: 20px auto;
+}
+
+/* Hover effect for blog details */
+.blog-details:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* More pronounced shadow */
+}
+
+.blog-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.3em;
+  color: var(--primary);
+}
+.blog-details p {
+  margin: 0 0 7px 0;
+  font-size: 1.1em;
+  color: white;
+}
+.blog-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/* new blog form */
+label, input {
+  display: block;
+}
+
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+form label {
+  font-size: 20px;
+
+}
+form button {
+  background: green;
+  border: 0;
+  color: white;
+  padding: 10px;
+  font-family: "Robotica";
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+form button:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* More pronounced shadow */
+  transition: color 0.3s ease, transform 0.3s ease;
+
+}
+div.error {
+  padding: 10px;
+  background: #f1f1f1;
+  border: 1px solid red;
+  color: black;
+  font-size: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid red;
 }
