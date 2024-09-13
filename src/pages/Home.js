@@ -11,7 +11,7 @@ const Home = () => {
 
         const getBlogs = async () => {
             try {
-                const response = await fetch('https://urbantxt-api.onrender.com/api/blogs') // need proxy for coors outside for in development 
+                const response = await fetch('/api/blogs') // need proxy for coors outside for in development 
                 const jsonInfo = await response.json() // can use await because in async function 
 
                 if (response.ok) { // no error json good 

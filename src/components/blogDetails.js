@@ -3,7 +3,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 const BlogDetails = ({ blog, setBlogs, blogs }) => {
 
     const handleDelete = async () => {
-        const response = await fetch('https://urbantxt-api.onrender.com/api/blogs/'+blog._id, {
+        const response = await fetch('/api/blogs/'+blog._id, {
             method: 'DELETE'
         })
         if (response.ok) {
